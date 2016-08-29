@@ -1,1 +1,1 @@
-# hugbunadarverkefni1
+# hugbúnaðarverkefni 1
