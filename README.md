@@ -10,5 +10,3 @@ he or she has been invited to.
 
 ## Team
 Sveinn Víkingur Þorsteinsson, Kristófer Másson, Magnús Ólafsson and Eyjólfur Karlsson. 
-
-### drasl
