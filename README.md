@@ -9,4 +9,4 @@ The user can sign in with facebook, and then see private events
 he or she has been invited to.
 
 ## Team
-Sveinn Víkingur Þorsteinsson, Kristófer Másson, Magnús (Auli) Ólafsson and Eyjólfur Árni Karlsson. 
+Sveinn Víkingur Þorsteinsson, Kristófer Másson, Magnús Ólafsson and Eyjólfur Árni Karlsson. 
