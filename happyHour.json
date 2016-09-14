@@ -1081,5 +1081,307 @@
             "0"
         ]
     },
+    {
+        "nafn": "Kaffibarinn",
+        "heimilisfang": "Bergstaðarstræti 1",
+        "timi": [
+                    "15:00",
+                    "20:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "650",
+            "0",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Barber Bar",
+        "heimilisfang": "Laugabegur 66-68",
+        "timi": [
+                    "16:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "650",
+            "650",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Reykjavík Chips",
+        "heimilisfang": "Vitasíg 10",
+        "timi": [
+                    "20:00",
+                    "22:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "1000",
+            "0",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Torfastofan",
+        "heimilisfang": "Sigrúni 38",
+        "timi": [
+                    "17:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "500",
+            "600",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Uno Cucina Italiana",
+        "heimilisfang": "Við Ingólfstorg",
+        "timi": [
+                    "17:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "645",
+            "745",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Vínsmakkarinn",
+        "heimilisfang": "Laugavegur 73",
+        "timi": [
+                    "16:00",
+                    "20:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "600",
+            "700",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Skúli Craft Bar",
+        "heimilisfang": "Aðalstræti 9",
+        "timi": [
+                    "14:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "700",
+            "1000",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Sólon Bistro",
+        "heimilisfang": "Bankastræti 7A",
+        "timi": [
+                    "15:00",
+                    "18:00"
+        ],
+        "dagar": [
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS"
+        ],
+        "verd": [
+            "650",
+            "700",
+            "0"
+        ]
+    },
+    {
+        "nafn": "IÐA Zimsen",
+        "heimilisfang": "Vesturgata 2A",
+        "timi": [
+                    "19:00",
+                    "22:00"
+        ],
+        "dagar": [
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS"
+        ],
+        "verd": [
+            "445",
+            "0",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Café Mezzo",
+        "heimilisfang": "Lækjargötu 2A",
+        "timi": [
+                    "17:00",
+                    "22:00"
+        ],
+        "dagar": [
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS"
+        ],
+        "verd": [
+            "800",
+            "1150",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Icelandair Hótel Hérað",
+        "heimilisfang": "Miðvangur 5-7",
+        "timi": [
+                    "17:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "600",
+            "650",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Ölsmiðjan",
+        "heimilisfang": "Lækjargötu 10",
+        "timi": [
+                    "16:00",
+                    "20:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "490",
+            "850",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Mónakó",
+        "heimilisfang": "Laugavegi 78",
+        "timi": [
+                    "11:00",
+                    "20:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "750",
+            "0",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Satt Restaurant",
+        "heimilisfang": "Nauhólsvegur 52",
+        "timi": [
+                    "16:00",
+                    "18:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "600",
+            "650",
+            "0"
+        ]
+    },
 ]
 }
