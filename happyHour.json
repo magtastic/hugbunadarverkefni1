@@ -1,0 +1,1085 @@
+{"stadir":[
+    {
+        "nafn": "Sæta Svínið Gastropub",
+        "heimilisfang": "Hafnarstræti 1-3",
+        "timi": [
+                    "22:00",
+                    "00:00"
+        ],
+        "dagar": [
+                    "FÖS"
+        ],
+        "verd": [
+            "0",
+            "0",
+            "1195"
+        ]
+    },
+    {
+        "nafn": "Sæta Svínið Gastropub",
+        "heimilisfang": "Hafnarstræti 1-3",
+        "timi": [
+                    "15:00",
+                    "18:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "595",
+            "695",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Forréttabarinn",
+        "heimilisfang": "Nýlendugata 14",
+        "timi": [
+                    "16:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "500",
+            "700",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Loftið",
+        "heimilisfang": "Austurstræti 9",
+        "timi": [
+                    "16:00",
+                    "21:00"
+        ],
+        "dagar": [
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "600",
+            "700",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Kringlukráin",
+        "heimilisfang": "Kringlan 4-12",
+        "timi": [
+                    "16:00",
+                    "18:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "700",
+            "900",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Íslenski Barinn",
+        "heimilisfang": "Ingólfstræti 1A",
+        "timi": [
+                    "16:00",
+                    "18:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "700",
+            "700",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Billiardbarinn",
+        "heimilisfang": "Faxafeni 12",
+        "timi": [
+                    "17:00",
+                    "20:00"
+        ],
+        "dagar": [
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS"
+        ],
+        "verd": [
+            "550",
+            "0",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Red Chili",
+        "heimilisfang": "Laugavegi 176",
+        "timi": [
+                    "16:00",
+                    "18:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "650",
+            "650",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Sushusamba",
+        "heimilisfang": "Þingoltstræti 5",
+        "timi": [
+                    "17:00",
+                    "18:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "645",
+            "745",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Bus Hostel",
+        "heimilisfang": "Skógarhlíð 10",
+        "timi": [
+                    "17:00",
+                    "21:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "600",
+            "600",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Hótel Holt",
+        "heimilisfang": "Bergstaðastræti 37",
+        "timi": [
+                    "16:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "650",
+            "750",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Astrabar",
+        "heimilisfang": "Hagatorgi 1",
+        "timi": [
+                    "17:00",
+                    "18:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "500",
+            "750",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Primo",
+        "heimilisfang": "Þingholtsstræti 1",
+        "timi": [
+                    "14:00",
+                    "18:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "800",
+            "1290",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Kaffi Krókur",
+        "heimilisfang": "Aðalgata 16",
+        "timi": [
+                    "17:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "475",
+            "0",
+            "0"
+        ]
+    },
+    {
+        "nafn": "101 Hótel",
+        "heimilisfang": "Hverfisgötu 10",
+        "timi": [
+                    "16:00",
+                    "18:30"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "750",
+            "900",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Ský Launge & Bar",
+        "heimilisfang": "Ingólfstræti 1",
+        "timi": [
+                    "17:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "600",
+            "900",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Sólan Bistro",
+        "heimilisfang": "Bankastræpti 7A",
+        "timi": [
+                    "15:00",
+                    "18:00"
+        ],
+        "dagar": [
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS"
+        ],
+        "verd": [
+            "650",
+            "700",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Ölstofa Kormáks og Skjaldar",
+        "heimilisfang": "Vegamótastíg 4",
+        "timi": [
+                    "15:00",
+                    "20:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "750",
+            "800",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Dubliner",
+        "heimilisfang": "Hafnarstræti 4",
+        "timi": [
+                    "12:00",
+                    "20:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "600",
+            "600",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Bíó Paradís",
+        "heimilisfang": "Hverfisgata 54",
+        "timi": [
+                    "17:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "500",
+            "500",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Bryggjan Brugghús",
+        "heimilisfang": "Grandagarði 8",
+        "timi": [
+                    "16:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "750",
+            "750",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Loft Hostel",
+        "heimilisfang": "Bankstræti 7",
+        "timi": [
+                    "16:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS"
+        ],
+        "verd": [
+            "600",
+            "700",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Café Amour",
+        "heimilisfang": "Ráðhústorgi 9",
+        "timi": [
+                    "18:00",
+                    "21:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "550",
+            "0",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Mar",
+        "heimilisfang": "Hafnarbúðum Geirsgötu",
+        "timi": [
+                    "18:00",
+                    "21:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "550",
+            "695",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Bazaar",
+        "heimilisfang": "Hringbraut 121",
+        "timi": [
+                    "16:00",
+                    "18:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "800",
+            "800",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Petersen Svítan í Gamla Bíó",
+        "heimilisfang": "Ingólfsstræti 2",
+        "timi": [
+                    "17:00",
+                    "20:00"
+        ],
+        "dagar": [
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "800",
+            "900",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Kaldibar",
+        "heimilisfang": "Laugavegur 20B",
+        "timi": [
+                    "16:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "650",
+            "0",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Bravó",
+        "heimilisfang": "Laugavegur 22",
+        "timi": [
+                    "11:00",
+                    "20:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "650",
+            "750",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Húrra",
+        "heimilisfang": "Hverfisgötu 50",
+        "timi": [
+                    "18:00",
+                    "21:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "500",
+            "700",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Radisson Blue 1919 Hotel",
+        "heimilisfang": "Pósthússtræti 2",
+        "timi": [
+                    "16:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS"
+        ],
+        "verd": [
+            "600",
+            "575",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Energia",
+        "heimilisfang": "Smáralind",
+        "timi": [
+                    "17:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "600",
+            "0",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Nora Magasín",
+        "heimilisfang": "Pósthússtræti 9",
+        "timi": [
+                    "16:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "650",
+            "600",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Hlemmur Square",
+        "heimilisfang": "Laugabegur 105",
+        "timi": [
+                    "16:00",
+                    "20:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "600",
+            "600",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Kikí Queer Bar",
+        "heimilisfang": "Laugavegur 22",
+        "timi": [
+                    "21:00",
+                    "01:00"
+        ],
+        "dagar": [
+                    "FIM"
+        ],
+        "verd": [
+            "500",
+            "0",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Icelandair Hótel Klaustur",
+        "heimilisfang": "Klausturvegi 6",
+        "timi": [
+                    "17:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "600",
+            "650",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Bar 11",
+        "heimilisfang": "Hverfisgata 18",
+        "timi": [
+                    "21:00",
+                    "00:00"
+        ],
+        "dagar": [
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "500",
+            "0",
+            "0"
+        ]
+    },
+    {
+        "nafn": "T.G.I. Friday's",
+        "heimilisfang": "Hagasmára 1",
+        "timi": [
+                    "16:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "700",
+            "0",
+            "1125"
+        ]
+    },
+    {
+        "nafn": "Enski Barinn English Pub",
+        "heimilisfang": "Austurstræti 12",
+        "timi": [
+                    "16:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "650",
+            "850",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Dillon",
+        "heimilisfang": "Laugavegi 30",
+        "timi": [
+                    "16:00",
+                    "20:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "550",
+            "700",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Danska Kráin",
+        "heimilisfang": "Ingólfsstræti 3",
+        "timi": [
+                    "16:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "500",
+            "600",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Vegamót",
+        "heimilisfang": "Vegamótastíg 4",
+        "timi": [
+                    "22:00",
+                    "01:00"
+        ],
+        "dagar": [
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "750",
+            "750",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Hvíti Riddarinn",
+        "heimilisfang": "Háholti 13",
+        "timi": [
+                    "15:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "650",
+            "800",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Ísafold",
+        "heimilisfang": "Þingholtsstræti 3-5",
+        "timi": [
+                    "17:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "600",
+            "900",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Tíu Dropar Kaffihús",
+        "heimilisfang": "Laugavegi 27",
+        "timi": [
+                    "18:00",
+                    "21:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "750",
+            "750",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Mínakó",
+        "heimilisfang": "Laugavegi 78",
+        "timi": [
+                    "11:00",
+                    "20:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "0",
+            "750",
+            "0"
+        ]
+    },
+    {
+        "nafn": "B5",
+        "heimilisfang": "Bankastræti 5",
+        "timi": [
+                    "17:00",
+                    "20:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "500",
+            "600",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Miðgarður",
+        "heimilisfang": "Laugavegi 120",
+        "timi": [
+                    "17:00",
+                    "19:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "600",
+            "900",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Norðlenski Barinn",
+        "heimilisfang": "Strandgötu 7",
+        "timi": [
+                    "19:00",
+                    "22:00"
+        ],
+        "dagar": [
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "900",
+            "0",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Glaumbar",
+        "heimilisfang": "Tryggvagata 20",
+        "timi": [
+                    "21:00",
+                    "01:00"
+        ],
+        "dagar": [
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS"
+        ],
+        "verd": [
+            "390",
+            "0",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Tacobarinn",
+        "heimilisfang": "Hverfisgata 20",
+        "timi": [
+                    "16:00",
+                    "18:00"
+        ],
+        "dagar": [
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS"
+        ],
+        "verd": [
+            "600",
+            "700",
+            "0"
+        ]
+    },
+    {
+        "nafn": "Icalndair Hótel Akureyri",
+        "heimilisfang": "Þingvallastræti 23",
+        "timi": [
+                    "16:00",
+                    "18:00"
+        ],
+        "dagar": [
+                    "SUN",
+                    "MÁN",
+                    "ÞRI",
+                    "MIÐ",
+                    "FIM",
+                    "FÖS",
+                    "LAU"
+        ],
+        "verd": [
+            "600",
+            "650",
+            "0"
+        ]
+    },
+]
+}
