@@ -3,7 +3,12 @@ const http = require('http');
 
 
 exports.searchEvents = (req, res, next) => {
+  //Við köllum ég á getFBEvents en í því falli er async kall. Því 
+  //getur getFBEvents í raun ekki skilað neinu results nema við gerum eitthvað
+  //nodejs trixxx sem lætur það vera sync. console.log 1 keyrir á undan console.log 2
   const results = dataFetcher.getFBEvents(req.longitude, req.latitude);
+  //þetta er console.log 1
+  console.log(results);
   req.value = results;
   next();
 };
