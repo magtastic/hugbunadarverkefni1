@@ -30,12 +30,12 @@ build/Release
 # Dependency directories
 node_modules
 jspm_packages
-.eslintrc
 
 # Optional npm cache directory
 .npm
 
 # Optional eslint cache
+*.eslintrc
 .eslintcache
 
 # Optional REPL history
