@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  h1= title
+
+  if input
+    p Þú slóst inn:
+    p: strong #{input}
+
+    if split.length > 0
+      p Úr því #{split.length === 1 ? 'fannst talan' : 'fundust tölurnar'}
+      p: strong= split.join(', ')
+
+      if !!result && split.length > 1
+        p Margfeldið af þeim er
+        p: strong= result
+
+      if factors && factors.length > 0
+        p Þættir eru:
+        p: strong= factors.join(', ')
+
+      else
+        p Sú tala á sér enga þætti!
+    else
+      p Úr því fundust engar tölur
+
+    hr
+    p Endurtaka leikinn!
+
+  form(method="post", action="/")
+    div
+      label(for="text") Tala eða tölur
+    textarea(name="text", id="text", cols=40, rows=5)
+    div
+      button Margfalda og finna þætti
