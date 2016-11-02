@@ -21,7 +21,14 @@ router.post('/', (req, res, next) => {
 
 router.post('/ip', (req, res, next) => {
   console.log("Hér var kallað á /ip með post úr main.js");
-  console.log(req.body);
+
+  for(params in req.body){
+    var myData = JSON.parse(params);
+  }
+  console.log(myData);
+  console.log(myData.ip);
+
+
   res.render('index', data);
 });
 
