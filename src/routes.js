@@ -10,7 +10,7 @@ router.get('/', (req, res, next) => {
 
 router.post('/', (req, res, next) => {
   const title = 'Niðurstöður margföldunar';
-  const data = { title};
+  const data = { title };
   res.render('index', data);
 });
 
