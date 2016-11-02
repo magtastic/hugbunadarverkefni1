@@ -1,20 +1,22 @@
-var requst = new XMLHttpRequest();
-requst.open('GET', "http://jsonip.com/?callback=", true);
-requst.onreadystatechange = processRequest;
-requst.send();
+var request = new XMLHttpRequest();
+request.open('GET', "http://jsonip.com/?callback=", true);
+request.onreadystatechange = processRequest;
+request.send();
 
 function processRequest(e){
-    if (requst.readyState == 4 && requst.status == 200) {
-        var response = JSON.parse(requst.responseText);
+    if (request.readyState == 4 && request.status == 200) {
+        var response = JSON.parse(request.responseText);
         console.log(response);
         var myIp = response.ip;
-        var testString = "moneymoney";
-        postIP(testString);
+        postIP(myIp);
     }
 }
 
 function postIP(ip){
-  requst.open('POST', '/ip', true);
-  requst.onreadystatechange = null;
-  requst.send(ip);
+    console.log("here");
+  request.open('POST', '/ip', true);
+  request.onreadystatechange = null;
+  request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  var object = {"ip": ip};
+  request.send(JSON.stringify(object));
 }
