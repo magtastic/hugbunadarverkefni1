@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const dataFetcher = require("./lib/dataFetcher.js")
+const dataHandler = require("./lib/dataHandler.js")
 
-router.get('/', dataFetcher.getStuff, (req, res, next) => {
+router.get('/', dataHandler.searchEvents, (req, res, next) => {
   const title = 'Heimasíðan okkar';
   const data = { title };
   console.log(req.value);
