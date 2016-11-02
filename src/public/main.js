@@ -8,7 +8,8 @@ function processRequest(e){
         var response = JSON.parse(requst.responseText);
         console.log(response);
         var myIp = response.ip;
-        postIP(myIP);
+        var testString = "moneymoney";
+        postIP(testString);
     }
 }
 
