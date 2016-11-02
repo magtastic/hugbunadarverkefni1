@@ -8,6 +8,12 @@ function processRequest(e){
         var response = JSON.parse(requst.responseText);
         console.log(response);
         var myIp = response.ip;
+        postIP(myIP);
     }
 }
 
+function postIP(ip){
+  requst.open('POST', '/ip', true);
+  requst.onreadystatechange = null;
+  requst.send(ip);
+}

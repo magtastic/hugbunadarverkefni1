@@ -15,4 +15,10 @@ router.post('/', (req, res, next) => {
   res.render('index', data);
 });
 
+router.post('/ip', (req, res, next) => {
+  const title = 'Niðurstöður margföldunar';
+  const data = { title };
+  res.render('index', data);
+});
+
 module.exports = router;
