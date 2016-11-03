@@ -38,3 +38,20 @@ exports.getLocationByIP = (req, res, next) => {
         });
     });
 };
+
+
+//þetta er skítamix, getum samt notað innihaldið þegar við erum búinir að redda 
+//þessu me getFBEvents async dæmið
+exports.setFBEvents = (queryResults) => {
+    var obj = JSON.parse(queryResults);
+    var events = obj.events;
+    var num = 0;
+    for(event in events){
+        num ++;
+        console.log("-----------------------")
+        console.log("event numer "+num);
+        console.log(events[event]);
+        console.log("-----------------------")
+    }
+    
+}
