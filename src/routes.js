@@ -7,8 +7,8 @@ const dataFetcher = require("./lib/dataFetcher.js");
 //router.use(bodyParser.json());
 //router.use(bodyParser.urlencoded({ extended: true }))
 
-router.get('/', dataHandler.getLocationByIP, dataFetcher.searchEvents,
-                dataHandler.setFBEvents, (req, res, next) => {
+router.get('/', dataFetcher.getAuthToken, dataHandler.getLocationByIP, 
+                dataFetcher.searchEvents, dataHandler.setFBEvents, (req, res, next) => {
   const title = 'Heimasíðan okkar';
   const data = { title };
 
