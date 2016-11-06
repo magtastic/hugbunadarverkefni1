@@ -2,8 +2,19 @@ extends layout
 
 block content
   h1 Hello word
-  each event in events
-    div
-      h1= event.name
-      p= event.description
-      img(src= event.profilePicture)
+  div(class="cards")
+    each event in events
+      div(class="card")
+        img(src= event.coverPicture)
+        div(class="card-title")
+          a(class="toggle-info btn")
+            span(class="left")
+            span(class="right")
+          h2= event.name
+            small eitthvað
+        div(class="card-flap flap1")
+          div(class="card-description")= event.description
+          div(class="card-flap flap2")
+            div(class="card-actions")
+              a(class="btn") Read more
+
