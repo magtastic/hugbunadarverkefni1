@@ -3,7 +3,7 @@ const dataFetcher = require("./dataFetcher.js")
 const http = require('http');
 let events = {};
 let filters = {
-    startTime: Date.now(),
+    startTime: new Date(),
     endTime: Date.now(),
     minAttenders: 0,
     maxAttenders: null
