@@ -1,12 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const dataHandler = require("./lib/dataHandler.js");
+const dataFetcher = require("./lib/dataFetcher.js");
 //const bodyParser = require('body-parser');
 
 //router.use(bodyParser.json());
 //router.use(bodyParser.urlencoded({ extended: true }))
 
-router.get('/', dataHandler.getLocationByIP, dataHandler.searchEvents, (req, res, next) => {
+router.get('/', dataHandler.getLocationByIP, dataFetcher.searchEvents,
+                dataHandler.setFBEvents, (req, res, next) => {
   const title = 'Heimasíðan okkar';
   const data = { title };
 
