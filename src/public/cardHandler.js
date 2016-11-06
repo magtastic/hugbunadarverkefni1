@@ -1,6 +1,6 @@
 $(document).ready(function(){
   var zindex = 10;
-  
+
   $("div.card").click(function(){
 
     var isShowing = false;
@@ -38,6 +38,6 @@ $(document).ready(function(){
 
       zindex++;
     }
-    
+
   });
 });

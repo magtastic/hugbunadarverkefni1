@@ -1,17 +1,13 @@
 'use strict'
-
 const EventSearch = require('facebook-events-by-location-core');
-//munum þá væntanlega líka deleta þessu
-//const dataHandler = require("./dataHandler.js")
 const https = require('https');
 
 let appToken = "";
 
+//fetching all events 2500meters around the given longitude and latitude
 exports.searchEvents = (req, res, next) => {
   var results = "";
 
-  console.log(req.longitude);
-  console.log(req.latitude);
   const es = new EventSearch({
     accessToken: appToken,
     lat: req.latitude,
@@ -24,13 +20,11 @@ exports.searchEvents = (req, res, next) => {
     req.results = results;
     next();
 
-    //dataHandler.setFBEvents(results);
   }).catch((error) => {
     console.error(JSON.stringify(error));
   });
 };
-
-
+//access token for FB app
 exports.getAuthToken = (req,res,next) => {
   https.get({
         host: 'graph.facebook.com',

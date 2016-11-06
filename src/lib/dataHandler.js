@@ -9,9 +9,12 @@ let filters = {
     maxAttenders: null
 };
 
-
+//gives longitude and latitude for an IP
 exports.getLocationByIP = (req, res, next) => {
-  const tempIP = "130.208.131.18";
+
+  //Setjið IP tölu hér inn fyrir developing...
+  const tempIP = "Setjið ykkar IP-tölu hér";
+
   req.testIP = tempIP;
 
   http.get({
@@ -24,7 +27,6 @@ exports.getLocationByIP = (req, res, next) => {
             body += d;
         });
         response.on('end', function() {
-
             // Data reception is done, do whatever with it!
             var parsed = JSON.parse(body);
             console.log(parsed);
@@ -36,6 +38,7 @@ exports.getLocationByIP = (req, res, next) => {
     });
 };
 
+//Filtering events by user preferences
 exports.filterEvents = (req,res,next) => {
     console.log(filters.startTime);
     for(var event in events){
@@ -46,8 +49,9 @@ exports.filterEvents = (req,res,next) => {
     next();
 }
 
-//þetta er skítamix, getum samt notað innihaldið þegar við erum búinir að redda
-//þessu me getFBEvents async dæmið
+
+// keeping FB events so we dont need
+// to request for them again when ordering or filtering.
 exports.setFBEvents = (req, res, next) => {
     var obj = JSON.parse(req.results);
     var events = obj.events;
