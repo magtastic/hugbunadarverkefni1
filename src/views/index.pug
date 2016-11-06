@@ -1,6 +1,9 @@
 extends layout
 
 block content
+  form.inputbox
+    input(type=text required onclick="searchLocation()" id="searchBar")
+    button.del(type="reset")
   div(class="cards")
     each event in events
       div(class="card")
