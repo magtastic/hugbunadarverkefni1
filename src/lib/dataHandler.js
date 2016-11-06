@@ -2,8 +2,8 @@ const dataFetcher = require("./dataFetcher.js")
 const http = require('http');
 
 
-exports.searchEvents = (req, res, next) => {
-  //Við köllum ég á getFBEvents en í því falli er async kall. Því 
+/*exports.searchEvents = (req, res, next) => {
+  //Við köllum ég á getFBEvents en í því falli er async kall. Því
   //getur getFBEvents í raun ekki skilað neinu results nema við gerum eitthvað
   //nodejs trixxx sem lætur það vera sync. console.log 1 keyrir á undan console.log 2
   const results = dataFetcher.getFBEvents(req.longitude, req.latitude);
@@ -11,7 +11,7 @@ exports.searchEvents = (req, res, next) => {
   console.log(results);
   req.value = results;
   next();
-};
+};*/
 
 exports.getLocationByIP = (req, res, next) => {
   const tempIP = "130.208.131.18";
@@ -40,10 +40,10 @@ exports.getLocationByIP = (req, res, next) => {
 };
 
 
-//þetta er skítamix, getum samt notað innihaldið þegar við erum búinir að redda 
+//þetta er skítamix, getum samt notað innihaldið þegar við erum búinir að redda
 //þessu me getFBEvents async dæmið
-exports.setFBEvents = (queryResults) => {
-    var obj = JSON.parse(queryResults);
+exports.setFBEvents = (req, res, next) => {
+    var obj = JSON.parse(req.results);
     var events = obj.events;
     var num = 0;
     for(event in events){
@@ -53,5 +53,5 @@ exports.setFBEvents = (queryResults) => {
         console.log(events[event]);
         console.log("-----------------------")
     }
-    
+    next();
 }
