@@ -8,12 +8,20 @@ const router = express.Router();
 // router.use(bodyParser.json());
 // router.use(bodyParser.urlencoded({ extended: true }))
 
+<<<<<<< HEAD
 router.get('/', dataFetcher.getAuthToken,
                 dataHandler.getLocationByIP,
                 dataFetcher.searchEvents,
                 dataHandler.setFBEvents,
                 (req, res, next) => {
                   const title = 'Heimasíðan okkar';
+=======
+router.get('/', dataFetcher.getAuthToken, dataHandler.getLocationByIP, 
+                dataFetcher.searchEvents, dataHandler.setFBEvents, 
+                dataHandler.filterEvents, (req, res, next) => {
+  const title = 'Heimasíðan okkar';
+  const data = { title };
+>>>>>>> 830da75fbc45962c8ddc48f431dbb3d67ce065f2
 
                   const dummyEvent = {
                     id: '342226739463992',
@@ -61,14 +69,6 @@ router.post('/', (req, res, next) => {
 router.post('/ip', (req, res, next) => {
   const title = 'Niðurstöður margföldunar';
   const data = { title };
-/*
-  console.log("Hér var kallað á /ip með post úr main.js");
-  for(params in req.body){
-    var myData = JSON.parse(params);
-  }
-  console.log(myData);
-  console.log(myData.ip);
-*/
 
   res.render('index', data);
 });
