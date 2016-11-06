@@ -4,9 +4,6 @@ const EventSearch = require('facebook-events-by-location-core');
 //const dataHandler = require("./dataHandler.js")
 const https = require('https');
 
-const appId = '1729664434025571'
-const appSecret = 'fb24916f592c9dd9dcb26c998eb0a28a'
-
 let appToken = "";
 
 exports.searchEvents = (req, res, next) => {
@@ -37,8 +34,8 @@ exports.getAuthToken = (req,res,next) => {
   https.get({
         host: 'graph.facebook.com',
         path: '/oauth/access_token'+
-              '?client_id='+appId+
-              '&client_secret='+appSecret+
+              '?client_id='+'1729664434025571'+
+              '&client_secret='+'fb24916f592c9dd9dcb26c998eb0a28a'+
               '&grant_type=client_credentials'
     }, function(response) {
         var body = '';
