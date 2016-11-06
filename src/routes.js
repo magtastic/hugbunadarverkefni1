@@ -43,10 +43,9 @@ router.get('/', dataFetcher.getAuthToken, dataHandler.getLocationByIP,
                       },
                     },
                   };
-                  const event = res.locals.events[0];
-                  console.log(event);
+                  const events = res.locals.events;
 
-                  const data = { title, event };
+                  const data = { title, events };
                   res.render('index', data);
                 });
 
