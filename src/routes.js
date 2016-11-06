@@ -8,7 +8,8 @@ const dataFetcher = require("./lib/dataFetcher.js");
 //router.use(bodyParser.urlencoded({ extended: true }))
 
 router.get('/', dataFetcher.getAuthToken, dataHandler.getLocationByIP, 
-                dataFetcher.searchEvents, dataHandler.setFBEvents, (req, res, next) => {
+                dataFetcher.searchEvents, dataHandler.setFBEvents, 
+                dataHandler.filterEvents, (req, res, next) => {
   const title = 'Heimasíðan okkar';
   const data = { title };
 
@@ -24,14 +25,6 @@ router.post('/', (req, res, next) => {
 router.post('/ip', (req, res, next) => {
   const title = 'Niðurstöður margföldunar';
   const data = { title };
-/*
-  console.log("Hér var kallað á /ip með post úr main.js");
-  for(params in req.body){
-    var myData = JSON.parse(params);
-  }
-  console.log(myData);
-  console.log(myData.ip);
-*/
 
   res.render('index', data);
 });

@@ -1,17 +1,14 @@
+"use strict"
 const dataFetcher = require("./dataFetcher.js")
 const http = require('http');
+let events = {};
+let filters = {
+    startTime: Date.now(),
+    endTime: Date.now(),
+    minAttenders: 0,
+    maxAttenders: null
+};
 
-
-/*exports.searchEvents = (req, res, next) => {
-  //Við köllum ég á getFBEvents en í því falli er async kall. Því
-  //getur getFBEvents í raun ekki skilað neinu results nema við gerum eitthvað
-  //nodejs trixxx sem lætur það vera sync. console.log 1 keyrir á undan console.log 2
-  const results = dataFetcher.getFBEvents(req.longitude, req.latitude);
-  //þetta er console.log 1
-  console.log(results);
-  req.value = results;
-  next();
-};*/
 
 exports.getLocationByIP = (req, res, next) => {
   const tempIP = "130.208.131.18";
@@ -39,14 +36,23 @@ exports.getLocationByIP = (req, res, next) => {
     });
 };
 
+exports.filterEvents = (req,res,next) => {
+    console.log(filters.startTime);
+    for(var event in events){
+        if(filters.startTime > events[event]){
+            console.log(events[event]);
+        }
+    }
+    next();
+}
 
 //þetta er skítamix, getum samt notað innihaldið þegar við erum búinir að redda
 //þessu me getFBEvents async dæmið
 exports.setFBEvents = (req, res, next) => {
     var obj = JSON.parse(req.results);
-    var events = obj.events;
+    events = obj.events;
     var num = 0;
-    for(event in events){
+    for(var event in events){
         num ++;
         console.log("-----------------------")
         console.log("event numer "+num);
