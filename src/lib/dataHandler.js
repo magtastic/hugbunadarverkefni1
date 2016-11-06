@@ -45,6 +45,7 @@ exports.getLocationByIP = (req, res, next) => {
 exports.setFBEvents = (req, res, next) => {
     var obj = JSON.parse(req.results);
     var events = obj.events;
+    res.locals.events = obj.events;
     var num = 0;
     for(event in events){
         num ++;

@@ -2,7 +2,8 @@ extends layout
 
 block content
   h1 Hello word
-  
-  div
-    p Hér kemur info
-    p= myIp 
+  each event in events
+    div
+      h1= event.name
+      p= event.description
+      img(src= event.profilePicture)

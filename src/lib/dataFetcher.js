@@ -1,4 +1,5 @@
-"use strict"
+'use strict'
+
 const EventSearch = require('facebook-events-by-location-core');
 //munum þá væntanlega líka deleta þessu
 //const dataHandler = require("./dataHandler.js")
