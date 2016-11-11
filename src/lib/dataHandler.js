@@ -13,7 +13,7 @@ let filters = {
 exports.getLocationByIP = (req, res, next) => {
 
   //Setjið IP tölu hér inn fyrir developing...
-  const tempIP = "Setjið ykkar IP-tölu hér";
+  const tempIP = "130.208.151.126";
 
   req.testIP = tempIP;
 
