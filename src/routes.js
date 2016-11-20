@@ -20,6 +20,7 @@ router.get('/search', (req, res, next) => {
   },
   dataFetcher.getAuthToken, dataFetcher.searchEvents,
   dataHandler.setFBEvents, (req, res, next) => {
+  const title = "bull";
   const events = res.locals.events;
   const data = {title, events};
   res.render('index', data);

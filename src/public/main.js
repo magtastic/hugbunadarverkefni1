@@ -22,7 +22,7 @@
 //   var object = {"ip": ip};
 //   request.send(JSON.stringify(object));
 // }
-
+/*
   var theForm = $('.inputbox');
   theForm.find('input').keypress( (e) => {
     // 80 is for 'p' actually
@@ -32,5 +32,7 @@
       theForm.submit();
 
     }
-  })
+  });
+  */
+  
   //$(this).find('input[type=submit]').hide();
