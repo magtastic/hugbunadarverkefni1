@@ -1,5 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
 
+*{
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+}
+
 body {
   background: #dce1df;
   color: #4f585e;
@@ -46,7 +53,7 @@ div.card {
   width: 400px;
   margin: 8px;
   max-width: 300px;
-  perspective: 1000;
+  vertical-align: top;
   position: relative;
   text-align: left;
   transition: all 0.3s 0s ease-in;
@@ -98,15 +105,28 @@ div.card div.card-title h2 {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: -0.05em;
-  margin: 0;
-  padding: 0;
+  height: 60px;
+  width: 87%;
+  overflow: hidden;
 }
 
-div.card div.card-title h2 small {
-  display: block;
+div.card div.card-title h3 {
+  display: flex;
   font-size: 18px;
+  padding-top: 2%;
   font-weight: 600;
   letter-spacing: -0.025em;
+}
+
+div.card div.card-title h3 i{
+  padding-right: 5px;
+}
+
+.eventAttributes {
+  display: flex;
+  flex-direction: initial;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 div.card div.card-description {
