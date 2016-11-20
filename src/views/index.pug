@@ -1,9 +1,10 @@
 extends layout
 
 block content
-  form.inputbox
-    input(type=text required onclick="searchLocation()" id="searchBar")
+  form(class="inputbox" method="get" action="search")
+    input(type="text" name="searchString" required id="searchBar")
     button.del(type="reset")
+    //input(type="submit" value="asdf")
   div(class="cards")
     each event in events
       div(class="card")
@@ -19,4 +20,3 @@ block content
           div(class="card-flap flap2")
             div(class="card-actions")
               a(class="btn") Read more
-

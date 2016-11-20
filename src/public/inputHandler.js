@@ -1,6 +1,6 @@
-var searchBar = $("#searchBar");
+//var searchBar = $("#searchBar");
 
-function searchLocation(){
+/*function searchLocation(){
     console.log(searchBar.val());
     console.log("here");
 }
@@ -9,4 +9,4 @@ searchBar.keyup(function(event){
     if(event.keyCode == 13){
         searchBar.click();
     }
-});
+});*/

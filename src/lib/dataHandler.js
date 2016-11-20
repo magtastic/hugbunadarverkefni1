@@ -40,7 +40,7 @@ exports.getLocationByIP = (req, res, next) => {
 };
 
 //Filtering events by user preferences
-exports.filterEvents = (req,res,next) => {
+/*exports.filterEvents = (req,res,next) => {
 
     if(filters.startTime.valueOf() == filters.endTime.valueOf()){
         filters.endTime.setDate(filters.endTime.getDate()+1);
@@ -58,7 +58,7 @@ exports.filterEvents = (req,res,next) => {
     }
     res.locals.filterdEvents = filterdEvents;
     next();
-}
+}*/
 
 
 // keeping FB events so we dont need
@@ -66,5 +66,6 @@ exports.filterEvents = (req,res,next) => {
 exports.setFBEvents = (req, res, next) => {
     var obj = JSON.parse(req.results);
     events = obj.events;
+    res.locals.events = events;
     next();
 }
