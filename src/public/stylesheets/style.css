@@ -54,7 +54,7 @@ div.card {
 }
 
 div.card img {
-  max-width: 300px;
+  width: 100%;
 }
 
 div.card div.card-title {
