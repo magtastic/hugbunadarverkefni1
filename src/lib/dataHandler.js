@@ -1,10 +1,11 @@
 "use strict"
 const dataFetcher = require("./dataFetcher.js")
 const http = require('http');
-let events = {};
+let events = [];
+let filterdEvents = [];
 let filters = {
     startTime: new Date(),
-    endTime: Date.now(),
+    endTime: new Date(),
     minAttenders: 0,
     maxAttenders: null
 };
@@ -40,12 +41,22 @@ exports.getLocationByIP = (req, res, next) => {
 
 //Filtering events by user preferences
 exports.filterEvents = (req,res,next) => {
-    console.log(filters.startTime);
+
+    if(filters.startTime.valueOf() == filters.endTime.valueOf()){
+        filters.endTime.setDate(filters.endTime.getDate()+1);
+    }
+
+    var tmpStartDate = "";
+    var tmpEndDate= "";
+
     for(var event in events){
-        if(filters.startTime > events[event]){
-            console.log(events[event]);
+        tmpStartDate = new Date(events[event].startTime);
+        tmpEndDate = new Date(events[event].endTime);
+        if(tmpStartDate < filters.endTime && tmpEndDate > filters.startTime){
+            filterdEvents.push(events[event]);
         }
     }
+    res.locals.filterdEvents = filterdEvents;
     next();
 }
 
@@ -54,15 +65,6 @@ exports.filterEvents = (req,res,next) => {
 // to request for them again when ordering or filtering.
 exports.setFBEvents = (req, res, next) => {
     var obj = JSON.parse(req.results);
-    var events = obj.events;
-    res.locals.events = obj.events;
-    var num = 0;
-    for(var event in events){
-        num ++;
-        console.log("-----------------------")
-        console.log("event numer "+num);
-        console.log(events[event]);
-        console.log("-----------------------")
-    }
+    events = obj.events;
     next();
 }
