@@ -13,10 +13,18 @@ block content
             span(class="left")
             span(class="right")
           h2= event.name
-            small eitthvað
+          .eventAttributes
+            h3
+              i.fa.fa-map-marker(aria-hidden='true')
+              = event.venue.name
+            h3
+              i.fa.fa-users(aria-hidden='true')
+              = event.stats.attending
+            h3
+              i.fa.fa-clock-o(aria-hidden='true')
+              = event.startTime
         div(class="card-flap flap1")
           div(class="card-description")= event.description
           div(class="card-flap flap2")
             div(class="card-actions")
               a(class="btn") Read more
-
