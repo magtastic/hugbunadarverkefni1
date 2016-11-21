@@ -21,7 +21,6 @@ function getJsonFromHTML(){
 }
 
 function filterEventsByAttenders(){
-    
     var removeEvents = [];
     for(var num in shownEvents){
         var attendees = shownEvents[num].stats.attending;
@@ -32,11 +31,9 @@ function filterEventsByAttenders(){
             removeEvents.push(shownEvents[num]);
         }
     }
-
     for(var num in removeEvents){
         shownEvents.splice(shownEvents.indexOf(removeEvents[num]),1);
     }
-
 }
 
 function filterEventsByTime(){
@@ -68,11 +65,9 @@ function eventIsInArray(arr,id){
 }
 
 function convertFacebookDateToJavaScriptDate(facebookDate){
-    
     if(facebookDate == null || !facebookDate || facebookDate == undefined){
         return false;
     };
-
     facebookDate = facebookDate.replace(/-/g, "/");
     facebookDate = facebookDate.substring(0,facebookDate.indexOf("+"));
     facebookDate = facebookDate.replace("T"," ");
@@ -84,15 +79,10 @@ function convertFacebookDateToJavaScriptDate(facebookDate){
 function hideEvents(){
     var id = null;
     var element = null;
-    
-    console.log($("#1853427888224644"));
-    
+
     for(var att in shownEvents){
         id = shownEvents[att].id;
         element = $("#"+id);
         element.css("display","inline-block");
-        console.log(shownEvents[att].name);
     }
-    console.log(shownEvents);
 }
-
