@@ -7,7 +7,10 @@ block content
     //input(type="submit" value="asdf")
   div(class="cards")
     each event in events
-      div(class="card")
+      div(class="card" id= event.id)
+        div(class="hidden-info") 
+          - var json = JSON.stringify(event);
+          p= json
         img(src= event.profilePicture)
         div(class="card-title")
           a(class="toggle-info btn")

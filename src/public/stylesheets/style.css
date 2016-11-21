@@ -47,9 +47,13 @@ div.cards {
   text-align: center;
 }
 
+.hidden-info{
+  display: none;
+}
+
 div.card {
   background: #ffffff;
-  display: inline-block;
+  display: none;
   width: 400px;
   margin: 8px;
   max-width: 300px;
