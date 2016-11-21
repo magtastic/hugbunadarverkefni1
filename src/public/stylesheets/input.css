@@ -3,10 +3,10 @@
 .inputbox {
   color: #4f585e;
   height: 50px;
-  width: 300px;
+  width: 500px;
   position: absolute;
   left: 50%;
-  top: 40px;
+  top: 70px;
   transform: translate(-50%, -50%);
 }
 
