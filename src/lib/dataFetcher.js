@@ -8,14 +8,6 @@ let appToken = "";
 exports.searchEvents = (req, res, next) => {
   var results = "";
 
-  if(req.isSpecificSearching === true) {
-    // Við ættum að finna long og lat miðað við searchið..
-    // Og í öðrum middleware
-    // þetta er bara Akureyri at the moment... skítmix
-    req.latitude = "65.6885";
-    req.longitude = "-18.1262";
-  }
-
   const es = new EventSearch({
     accessToken: appToken,
     lat: req.latitude,
