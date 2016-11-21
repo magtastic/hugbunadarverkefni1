@@ -14,7 +14,9 @@ dataFetcher.searchEvents, dataHandler.setFBEvents, (req, res, next) => {
 
 router.get('/search', (req, res, next) => {
     console.log("search route");
-    console.log(req.query);
+    const latAndLng = req.query.searchString.split(',')
+    req.latitude = latAndLng[0];
+    req.longitude = latAndLng[1];
     req.isSpecificSearching = true;
     next();
   },

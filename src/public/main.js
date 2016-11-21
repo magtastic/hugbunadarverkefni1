@@ -22,17 +22,44 @@
 //   var object = {"ip": ip};
 //   request.send(JSON.stringify(object));
 // }
-/*
-  var theForm = $('.inputbox');
-  theForm.find('input').keypress( (e) => {
-    // 80 is for 'p' actually
-    var enterKeycode = 80;
-    if(e.keyCode===enterKeycode) {
-      console.log("hae");
-      theForm.submit();
 
+// $("#btn").click(function(){
+//             var geocoder =  new google.maps.Geocoder();
+//     geocoder.geocode( { 'address': 'miami, us'}, function(results, status) {
+//           if (status == google.maps.GeocoderStatus.OK) {
+//             alert("location : " + results[0].geometry.location.lat() + " " +results[0].geometry.location.lng());
+//           } else {
+//             alert("Something got wrong " + status);
+//           }
+//         });
+// });
+
+$(document).ready(() => {
+  const theForm = $('.inputbox');
+  const inputBox = $(theForm.find('input'));
+  inputBox.keypress((e) => {
+    const enterKeycode = 13;
+    if (e.keyCode === enterKeycode) {
+      console.log('hae');
+      e.preventDefault();
+      const inputValue = inputBox.val();
+      getLatitudeAndLongitude(processResponse, inputValue);
     }
   });
-  */
-  
-  //$(this).find('input[type=submit]').hide();
+  function getLatitudeAndLongitude (callback, inputValue) {
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode( { 'address': inputValue}, function(results, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+            console.log("location : " + results[0].geometry.location.lat() + " " +results[0].geometry.location.lng());
+          } else {
+            console.log("Something got wrong " + status);
+          }
+          if (results)
+          callback(results);
+        });
+  }
+  function processResponse (results) {
+    inputBox.val([results[0].geometry.location.lat(), results[0].geometry.location.lng()]);
+    theForm.submit();
+  }
+})
