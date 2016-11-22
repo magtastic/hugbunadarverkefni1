@@ -1,14 +1,30 @@
 extends layout
 
 block content
+  section(id='header-photo')
+    div(id='main-logo')
+      p(id='header-title') EVENTUALLY
+
+  nav(class='navigation')
+    div(class='hamburger')
+      span(class='bars')
+    div(class='menu')
+      ul
+        li
+          a asdf
+        li
+          a asdf
+        li
+          a asdf
+
   form(class="inputbox" method="get" action="search")
     input(type="text" name="searchString" required id="searchBar")
     button.del(type="reset")
-    //input(type="submit" value="asdf")
+
   div(class="cards")
     each event in events
       div(class="card" id= event.id)
-        div(class="hidden-info") 
+        div(class="hidden-info")
           - var json = JSON.stringify(event);
           p= json
         img(src= event.profilePicture)

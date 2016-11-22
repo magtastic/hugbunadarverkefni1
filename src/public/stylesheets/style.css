@@ -8,7 +8,7 @@
 }
 
 body {
-  background: #dce1df;
+  background-color: #dce1df;
   color: #4f585e;
   font-family: 'Source Sans Pro', sans-serif;
   text-rendering: optimizeLegibility;
@@ -206,4 +206,29 @@ div.card.show div.flap1 {
 
 div.card.show div.flap2 {
   transition: all 0.3s 0.2s ease-out;
+}
+
+#header-photo {
+  background: url(./img/mynd.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-bottom: 80px;
+  height: 100%;
+  min-height: 40vh;
+}
+
+#main-logo {
+  display: block;
+  height: 100%;
+  min-height: 40vh;
+}
+
+#header-title {
+  text-shadow: 1px 2px 1px #000;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40vh;
+  font-size: 120px;
+  color: white;
 }
