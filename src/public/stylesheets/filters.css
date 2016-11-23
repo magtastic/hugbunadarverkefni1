@@ -100,3 +100,27 @@
 .menu:hover {
   overflow-y: auto;
 }
+
+#slider-range{
+  width: 100%;
+}
+
+#slider-range div{
+  background-color: red;
+}
+
+#slider-range span{
+  background-color: yellow;
+}
+
+#slider-range_1{
+  width: 100%;
+}
+
+#slider-range_1 div{
+  background-color: red;
+}
+
+#slider-range_1 span{
+  background-color: yellow;
+}
