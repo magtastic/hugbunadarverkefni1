@@ -39,7 +39,15 @@ block content
               = event.stats.attending
             h3
               i.fa.fa-clock-o(aria-hidden='true')
-              = event.startTime
+              - var startTime = new Date(event.startTime);
+              - var date = startTime.getDate();
+              - var month = startTime.getMonth();
+              - var hours = startTime.getHours();
+              - var minutes = startTime.getMinutes();
+              - if(hours <= 9) {hours = '0'+hours;}
+              - if(minutes <= 9) {minutes = '0'+minutes;}
+              - startTime = date+'/'+month+'  '+hours+':'+minutes;
+              = startTime
         div(class="card-flap flap1")
           div(class="card-description")= event.description
           div(class="card-flap flap2")
