@@ -67,5 +67,12 @@ exports.setFBEvents = (req, res, next) => {
     var obj = JSON.parse(req.results);
     events = obj.events;
     res.locals.events = events;
+    for(var ev in events){
+        console.log("------------------");
+        console.log(events[ev].name);
+        console.log(events[ev].startTime);
+        console.log(ev);
+        console.log("------------------");
+    }
     next();
 }
