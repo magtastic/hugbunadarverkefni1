@@ -50,7 +50,8 @@ $(document).ready(() => {
     var geocoder = new google.maps.Geocoder();
     geocoder.geocode( { 'address': inputValue}, function(results, status) {
           if (status == google.maps.GeocoderStatus.OK) {
-            console.log("location : " + results[0].geometry.location.lat() + " " +results[0].geometry.location.lng());
+            console.log(results);
+            //console.log("location : " + results[0].geometry.location.lat() + " " +results[0].geometry.location.lng());
           } else {
             console.log("Something got wrong " + status);
           }
@@ -59,7 +60,9 @@ $(document).ready(() => {
         });
   }
   function processResponse (results) {
-    inputBox.val([results[0].geometry.location.lat(), results[0].geometry.location.lng()]);
-    theForm.submit();
+    //inputBox.val([results[0].geometry.location.lat(), results[0].geometry.location.lng()]);
+    theForm.submit(=> {
+      location.assign('/search?searchString='+results[0].geometry.location.lat()+'%2C'+results[0].geometry.location.lng());
+    });
   }
 })
