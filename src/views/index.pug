@@ -34,6 +34,7 @@ block content
             h3
               i.fa.fa-map-marker(aria-hidden='true')
               = event.venue.name
+          .eventAttributes
             h3
               i.fa.fa-users(aria-hidden='true')
               = event.stats.attending
@@ -52,4 +53,4 @@ block content
           div(class="card-description")= event.description
           div(class="card-flap flap2")
             div(class="card-actions")
-              a(class="btn") Read more
+              a(class="btn" href='https://www.facebook.com/events/'+event.id) Read more
