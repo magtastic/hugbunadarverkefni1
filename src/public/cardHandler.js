@@ -13,6 +13,8 @@ $(document).ready(function(){
       // a card is already in view
       $("div.card.show")
         .removeClass("show");
+      $(this).find('h3').removeClass('unhide-overflow');
+      $(this).children('h2').removeClass('unhide-overflow');
 
       if (isShowing) {
         // this card was showing - reset the grid
@@ -35,6 +37,8 @@ $(document).ready(function(){
       $(this)
         .css({zIndex:zindex})
         .addClass("show");
+      $(this).find('h3').addClass('unhide-overflow');
+      $(this).children('h2').addClass('unhide-overflow');
 
       zindex++;
     }

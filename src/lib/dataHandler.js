@@ -1,5 +1,4 @@
-"use strict"
-const dataFetcher = require("./dataFetcher.js")
+const dataFetcher = require("./dataFetcher.js");
 const http = require('http');
 let events = [];
 let filterdEvents = [];
