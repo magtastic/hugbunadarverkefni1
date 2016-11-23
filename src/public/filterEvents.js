@@ -101,6 +101,7 @@ function saveFiltersInLocalStorage(f){
       localStorage.endTime = f.endTime;
       localStorage.minAttenders = f.minAttenders;
       localStorage.maxAttenders = f.maxAttenders;
+      console.log('save filters in LS');
     }
   })
 }
@@ -116,15 +117,17 @@ function loadFiltersInLocalStorage(){
 }
 
  function setLoadedFilters(lf){
-   if(lf.startTime != null) {
+   if(isNaN(lf.startTime.getDate()) === false ) {
      filters.startTime = lf.startTime;
    }
-   if(lf.endTime != null) {
+   if(isNaN(lf.endTime.getDate()) === false) {
      filters.endTime = lf.endTime;
    }
    if(lf.minAttenders != null) {
      filters.minAttenders = lf.minAttenders;
    }
-   filters.maxAttenders = lf.maxAttenders;
+   if(lf.maxAttenders != null) {
+     filters.maxAttenders = lf.maxAttenders;
+   }
 
  }
