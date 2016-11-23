@@ -10,6 +10,9 @@ var filters = {
 $(document).ready(function(){
     var events = $('.hidden-info');
     events.each(getJsonFromHTML);
+    saveFiltersInLocalStorage(filters);
+    var loadedFilters = loadFiltersInLocalStorage();
+    setLoadedFilters(loadedFilters);
     filterEventsByTime();
     filterEventsByAttenders();
     hideEvents();
@@ -43,7 +46,7 @@ function filterEventsByTime(){
 
     var tmpStartDate = "";
     var tmpEndDate= "";
-    
+
     for(var event in allEvents){
         allEvents[event].startTime = convertFacebookDateToJavaScriptDate(allEvents[event].startTime);
         allEvents[event].endTime = convertFacebookDateToJavaScriptDate(allEvents[event].endTime);
@@ -86,3 +89,42 @@ function hideEvents(){
         element.css("display","inline-block");
     }
 }
+
+function saveFiltersInLocalStorage(f){
+  const theForm = $('.inputbox');
+  const inputBox = $(theForm.find('input'));
+  inputBox.keypress((e) => {
+    const enterKeycode = 13;
+    if(e.keyCode === enterKeycode) {
+      e.preventDefault();
+      localStorage.startTime = f.startTime;
+      localStorage.endTime = f.endTime;
+      localStorage.minAttenders = f.minAttenders;
+      localStorage.maxAttenders = f.maxAttenders;
+    }
+  })
+}
+
+function loadFiltersInLocalStorage(){
+
+  var f = {};
+  f.startTime = new Date(localStorage.startTime);
+  f.endTime = new Date(localStorage.endTime);
+  f.minAttenders = localStorage.minAttenders;
+  f.maxAttenders = localStorage.maxAttenders;
+  return f;
+}
+
+ function setLoadedFilters(lf){
+   if(lf.startTime != null) {
+     filters.startTime = lf.startTime;
+   }
+   if(lf.endTime != null) {
+     filters.endTime = lf.endTime;
+   }
+   if(lf.minAttenders != null) {
+     filters.minAttenders = lf.minAttenders;
+   }
+   filters.maxAttenders = lf.maxAttenders;
+
+ }
