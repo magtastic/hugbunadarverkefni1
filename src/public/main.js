@@ -61,8 +61,7 @@ $(document).ready(() => {
   }
   function processResponse (results) {
     //inputBox.val([results[0].geometry.location.lat(), results[0].geometry.location.lng()]);
-    theForm.submit(=> {
-      location.assign('/search?searchString='+results[0].geometry.location.lat()+'%2C'+results[0].geometry.location.lng());
-    });
+    theForm.submit();
+    location.assign('/search?searchString='+results[0].geometry.location.lat()+'%2C'+results[0].geometry.location.lng());
   }
 })
