@@ -14,21 +14,30 @@ jQuery(function($)
       max: 500,
       values: [ 75, 300 ],
       slide: function( event, ui ) {
-          console.log("event: " + event);
-          console.log("ui: " + ui);
+          //updateFilter(ui.values[0], ui.values[1]);
+
       }
     });
   } );
-  
+
  $( function() {
     $( "#slider-range_1" ).slider({
       range: true,
       min: 0,
       max: 500,
-      values: [ 75, 300 ],
       slide: function( event, ui ) {
-          console.log("event: " + event);
-          console.log("ui: " + ui);
+          updateFilter("ATTENDEES", ui.values[0], ui.values[1]);
+          hideEvents();
+          filterEventsByTime();
+          filterEventsByAttenders();
+          showEvents();
       }
     });
   } );
+
+  function updateFilter(type, min, max) {
+    if(type === "ATTENDEES") {
+      filters.minAttenders = min;
+      filters.maxAttenders = max;
+    }
+  }

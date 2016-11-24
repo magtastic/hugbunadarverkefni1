@@ -8,14 +8,15 @@ var filters = {
 };
 
 $(document).ready(function(){
+    //var filters = {};
     var events = $('.hidden-info');
     events.each(getJsonFromHTML);
-    saveFiltersInLocalStorage(filters);
+    saveFiltersInLocalStorage(filters); //only saved on search submit
     var loadedFilters = loadFiltersInLocalStorage();
     setLoadedFilters(loadedFilters);
     filterEventsByTime();
     filterEventsByAttenders();
-    hideEvents();
+    showEvents();
 });
 
 function getJsonFromHTML(){
@@ -43,13 +44,20 @@ function filterEventsByTime(){
     if(filters.startTime.valueOf() == filters.endTime.valueOf()){
         filters.endTime.setDate(filters.endTime.getDate()+1);
     }
-
+    shownEvents=[];
     var tmpStartDate = "";
     var tmpEndDate= "";
 
     for(var event in allEvents){
+       if(allEvents[event].startTime != null
+         && typeof allEvents[event].startTime.length === 'function') {
         allEvents[event].startTime = convertFacebookDateToJavaScriptDate(allEvents[event].startTime);
-        allEvents[event].endTime = convertFacebookDateToJavaScriptDate(allEvents[event].endTime);
+       }
+       if(allEvents[event].endTime != null
+         && typeof allEvents[event].endTime.length === 'function') {
+         allEvents[event].endTime = convertFacebookDateToJavaScriptDate(allEvents[event].endTime);
+       }
+        // console.log(allEvents[event]);
         tmpStartDate = new Date(allEvents[event].startTime);
         tmpEndDate = new Date(allEvents[event].endTime);
         if(tmpStartDate < filters.endTime && tmpEndDate > filters.startTime && !eventIsInArray(shownEvents, allEvents[event].id)){
@@ -79,7 +87,8 @@ function convertFacebookDateToJavaScriptDate(facebookDate){
 }
 
 
-function hideEvents(){
+function showEvents(){
+
     var id = null;
     var element = null;
 
@@ -88,6 +97,16 @@ function hideEvents(){
         element = $("#"+id);
         element.css("display","inline-block");
     }
+}
+
+function hideEvents() {
+  var id = null;
+  var element = null;
+  for(var att in shownEvents){
+      id = shownEvents[att].id;
+      element = $("#"+id);
+      element.css("display","none");
+  }
 }
 
 function saveFiltersInLocalStorage(f){
@@ -101,7 +120,6 @@ function saveFiltersInLocalStorage(f){
       localStorage.endTime = f.endTime;
       localStorage.minAttenders = f.minAttenders;
       localStorage.maxAttenders = f.maxAttenders;
-      console.log('save filters in LS');
     }
   })
 }
@@ -129,5 +147,4 @@ function loadFiltersInLocalStorage(){
    if(lf.maxAttenders != null) {
      filters.maxAttenders = lf.maxAttenders;
    }
-
  }
