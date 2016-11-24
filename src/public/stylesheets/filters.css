@@ -89,6 +89,7 @@
 
 .open .menu {
   margin-top: 47vh;
+  padding: 3%;
   right: 0;
   opacity: 1;
   -webkit-transition: all 0.2s ease;
@@ -116,6 +117,8 @@
 
 #slider-range span{
   background-color: white;
+  width: auto;
+  text-align: center;
 }
 
 #slider-range_1{
@@ -128,4 +131,6 @@
 
 #slider-range_1 span{
   background-color: white;
+  width: auto;
+  text-align: center;
 }
