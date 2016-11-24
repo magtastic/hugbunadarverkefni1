@@ -25,6 +25,7 @@ jQuery(function($)
       range: true,
       min: 0,
       max: 500,
+      values: [ filters.minAttenders, 400 ],
       slide: function( event, ui ) {
           updateFilter("ATTENDEES", ui.values[0], ui.values[1]);
           hideEvents();
