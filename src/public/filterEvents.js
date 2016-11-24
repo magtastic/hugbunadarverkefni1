@@ -4,7 +4,7 @@ var filters = {
     startTime: new Date(),
     endTime: new Date(),
     minAttenders: 0,
-    maxAttenders: null
+    maxAttenders: 500
 };
 
 $(document).ready(function(){
