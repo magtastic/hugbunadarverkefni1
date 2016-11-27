@@ -8,7 +8,7 @@ const routes = require('./routes');
 
 const app = express();
 
-const EventSearch = require("facebook-events-by-location-core");
+const EventSearch = require('facebook-events-by-location-core');
 
 
 // view engine setup
@@ -22,7 +22,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-//app.use('/search', routes);
+// app.use('/search', routes);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

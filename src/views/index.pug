@@ -42,7 +42,7 @@ block content
               i.fa.fa-clock-o(aria-hidden='true')
               - var startTime = new Date(event.startTime);
               - var date = startTime.getDate();
-              - var month = startTime.getMonth();
+              - var month = startTime.getMonth()+1;
               - var hours = startTime.getHours();
               - var minutes = startTime.getMinutes();
               - if(hours <= 9) {hours = '0'+hours;}

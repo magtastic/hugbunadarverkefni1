@@ -1,20 +1,20 @@
-//Globals!
+// Globals!
 var allEvents = [];
 var shownEvents = [];
 var filters = {
-    startTime: new Date(),
-    endTime: new Date(),
-    minAttenders: 0,
-    maxAttenders: 500
+  startTime: new Date(),
+  endTime: new Date(),
+  minAttenders: 0,
+  maxAttenders: 500,
 };
 
-$(document).ready(function(){
-    initEventCards();
-    initFilterEvents();
-    initGoogleAPI();
+$(document).ready(function () {
+  initEventCards();
+  initFilterEvents();
+  initGoogleAPI();
 });
 
-function initEventCards(){
+function initEventCards() {
 
   var zindex = 10;
 
@@ -23,7 +23,7 @@ function initEventCards(){
     var isShowing = false;
 
     if ($(this).hasClass("show")) {
-      isShowing = true
+      isShowing = true;
     }
 
     if ($("div.cards").hasClass("showing")) {
@@ -61,7 +61,7 @@ function initEventCards(){
     }
 
   });
-};
+}
 
 //open filters
 jQuery(function($)
@@ -70,7 +70,7 @@ jQuery(function($)
     {
         $(".navigation").toggleClass("open");
 
-    })
+    });
 });
 
 //init date slider
@@ -137,14 +137,14 @@ jQuery(function($)
 
 //init the google geocoder
 function initGoogleAPI(){
-  const theForm = $('.inputbox');
-  const inputBox = $(theForm.find('input'));
-  inputBox.keypress((e) => {
-    const enterKeycode = 13;
+  var theForm = $('.inputbox');
+  var inputBox = $(theForm.find('input'));
+  inputBox.keypress( function (e) {
+    var enterKeycode = 13;
     if (e.keyCode === enterKeycode) {
       console.log('hae');
       e.preventDefault();
-      const inputValue = inputBox.val();
+      var inputValue = inputBox.val();
       getLatitudeAndLongitude(processResponse, inputValue);
     }
   });
@@ -166,10 +166,10 @@ function initGoogleAPI(){
     theForm.submit();
     location.assign('/search?searchString='+results[0].geometry.location.lat()+'%2C'+results[0].geometry.location.lng());
   }
-};
+}
 
 //When the site loads we filters
-//get all events from the location 
+//get all events from the location
 //and filter them out acording to
 //the filters option.
 function initFilterEvents(){
@@ -181,14 +181,14 @@ function initFilterEvents(){
     filterEventsByTime();
     filterEventsByAttenders();
     showEvents();
-};
+}
 
 //gets hidden JSON-string from
 //element and converts to a JS-object
 function getJsonFromHTML(){
     var myJson = this.innerHTML.replace("<p>","").replace("</p>","");
     allEvents.push(JSON.parse(myJson));
-};
+}
 
 //Filters out shownEvents acording to
 //min and max attenders.
@@ -208,7 +208,7 @@ function filterEventsByAttenders(){
     for(var num in removeEvents){
         shownEvents.splice(shownEvents.indexOf(removeEvents[num]),1);
     }
-};
+}
 
 //Filter all events acording to date filter options.
 function filterEventsByTime(){
@@ -220,11 +220,11 @@ function filterEventsByTime(){
     var tmpEndDate= "";
 
     for(var event in allEvents){
-       if(allEvents[event].startTime != null
+       if(allEvents[event].startTime !== null
          && typeof allEvents[event].startTime.length === 'function') {
         allEvents[event].startTime = convertFacebookDateToJavaScriptDate(allEvents[event].startTime);
        }
-       if(allEvents[event].endTime != null
+       if(allEvents[event].endTime !== null
          && typeof allEvents[event].endTime.length === 'function') {
          allEvents[event].endTime = convertFacebookDateToJavaScriptDate(allEvents[event].endTime);
        }
@@ -234,7 +234,7 @@ function filterEventsByTime(){
             shownEvents.push(allEvents[event]);
         }
     }
-};
+}
 
 //Checks if id is in given array
 function eventIsInArray(arr,id){
@@ -244,20 +244,20 @@ function eventIsInArray(arr,id){
         }
     }
     return false;
-};
+}
 
 //Converts the string that facebook gives to
 //a JS Date object.
 function convertFacebookDateToJavaScriptDate(facebookDate){
-    if(facebookDate == null || !facebookDate || facebookDate == undefined){
+    if(facebookDate === null || !facebookDate || facebookDate === undefined){
         return false;
-    };
+    }
     facebookDate = facebookDate.replace(/-/g, "/");
     facebookDate = facebookDate.substring(0,facebookDate.indexOf("+"));
     facebookDate = facebookDate.replace("T"," ");
     var result = new Date(facebookDate);
     return result;
-};
+}
 
 //Shows all events in shownEvents array
 function showEvents(){
@@ -269,7 +269,7 @@ function showEvents(){
         element = $("#"+id);
         element.css("display","inline-block");
     }
-};
+}
 
 //Hide all events in shownEvents array
 function hideEvents() {
@@ -280,14 +280,14 @@ function hideEvents() {
       element = $("#"+id);
       element.css("display","none");
   }
-};
+}
 
 //Saves fitler options to localStorage
 function saveFiltersInLocalStorage(f){
-  const theForm = $('.inputbox');
-  const inputBox = $(theForm.find('input'));
-  inputBox.keypress((e) => {
-    const enterKeycode = 13;
+  var theForm = $('.inputbox');
+  var inputBox = $(theForm.find('input'));
+  inputBox.keypress(function (e) {
+    var enterKeycode = 13;
     if(e.keyCode === enterKeycode) {
       e.preventDefault();
       localStorage.startTime = f.startTime;
@@ -295,8 +295,8 @@ function saveFiltersInLocalStorage(f){
       localStorage.minAttenders = f.minAttenders;
       localStorage.maxAttenders = f.maxAttenders;
     }
-  })
-};
+  });
+}
 
 //loads events from localStorage
 function loadFiltersInLocalStorage(){
@@ -306,7 +306,7 @@ function loadFiltersInLocalStorage(){
   f.minAttenders = localStorage.minAttenders;
   f.maxAttenders = localStorage.maxAttenders;
   return f;
-};
+}
 
 //Makes loaded filters from localStorage active
  function setLoadedFilters(lf){
@@ -316,10 +316,10 @@ function loadFiltersInLocalStorage(){
    if(isNaN(lf.endTime.getDate()) === false) {
      filters.endTime = lf.endTime;
    }
-   if(lf.minAttenders != null) {
+   if(lf.minAttenders !== null) {
      filters.minAttenders = lf.minAttenders;
    }
-   if(lf.maxAttenders != null) {
+   if(lf.maxAttenders !== null) {
      filters.maxAttenders = lf.maxAttenders;
    }
- };
+ }

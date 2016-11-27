@@ -13,20 +13,19 @@ dataFetcher.searchEvents, dataHandler.setFBEvents, (req, res, next) => {
 });
 
 router.get('/search', (req, res, next) => {
-    console.log("search route");
-    const latAndLng = req.query.searchString.split(',')
-    req.latitude = latAndLng[0];
-    req.longitude = latAndLng[1];
-    req.isSpecificSearching = true;
-    next();
-  },
+  const latAndLng = req.query.searchString.split(',');
+  req.latitude = latAndLng[0];
+  req.longitude = latAndLng[1];
+  req.isSpecificSearching = true;
+  next();
+},
   dataFetcher.getAuthToken, dataFetcher.searchEvents,
   dataHandler.setFBEvents, (req, res, next) => {
-  const title = "bull";
-  const events = res.locals.events;
-  const data = {title, events};
-  res.render('index', data);
-});
+    const title = 'bull';
+    const events = res.locals.events;
+    const data = { title, events };
+    res.render('index', data);
+  });
 
 router.post('/', (req, res, next) => {
   const title = 'Niðurstöður margföldunar';
