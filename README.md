@@ -1,22 +1,25 @@
 # Hugbúnaðarverkefni 1
 
 ## How to start
-- Go to www.myip.is and copy your ip to the variable *tempIP* in line 16 in src/lib/dataHandler.js (Later ip will be automatically fetched)
-- Go to shell and type:
+1. Download and install node from the internet (https://nodejs.org/)
+2. In your terminal, locate the folder which contains this readme file and type:
 
-> npm install
+  > npm install
 
-> npm start
+3. Wait for npm to install everything it needs
+4. When it's finished, type:
 
-- Go to localhost:3000 in browser
+  > npm start
+
+5. Go to localhost:3000 in browser (latest Chrome is supported)
 
 ## Description
-Web application that shows events near you or a specific location.
+Web application that shows events near a specific location.
 The application will then suggests events you should check out.
-These events will be pulled from an API that facebook provides.
+These events will be pulled from an API which facebook provides.
 
 
-## Team
+## Team 9
 Sveinn Víkingur Þorsteinsson, Kristófer Másson, Magnús Ólafsson and Eyjólfur Árni Karlsson.
 
 ## Execution
