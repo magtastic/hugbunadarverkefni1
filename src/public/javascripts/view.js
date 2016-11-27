@@ -285,8 +285,8 @@ jQuery(function($)
       }
     });
     var handles = $("#slider-range > span");
-    handles[0].innerHTML = 0;
-    handles[1].innerHTML = 1;
+    handles[0].innerHTML = filters.startTime.getDay();
+    handles[1].innerHTML = filters.endTime.getDay();
   });
 
 //init attending slider
