@@ -1,3 +1,4 @@
+//Globals!
 var allEvents = [];
 var shownEvents = [];
 var filters = {
@@ -7,8 +8,11 @@ var filters = {
     maxAttenders: 500
 };
 
+//When the site loads we filters
+//get all events from the location 
+//and filter them out acording to
+//the filters option.
 $(document).ready(function(){
-    //var filters = {};
     var events = $('.hidden-info');
     events.each(getJsonFromHTML);
     saveFiltersInLocalStorage(filters); //only saved on search submit
@@ -19,11 +23,17 @@ $(document).ready(function(){
     showEvents();
 });
 
+//gets hidden JSON-string from
+//element and converts to a JS-object
 function getJsonFromHTML(){
     var myJson = this.innerHTML.replace("<p>","").replace("</p>","");
     allEvents.push(JSON.parse(myJson));
 }
 
+//Filters out shownEvents acording to
+//min and max attenders.
+//This assumes that we have filtered
+//acording to date filter options.
 function filterEventsByAttenders(){
     var removeEvents = [];
     for(var num in shownEvents){
@@ -40,6 +50,7 @@ function filterEventsByAttenders(){
     }
 }
 
+//Filter all events acording to date filter options.
 function filterEventsByTime(){
     if(filters.startTime.valueOf() == filters.endTime.valueOf()){
         filters.endTime.setDate(filters.endTime.getDate()+1);
@@ -57,7 +68,6 @@ function filterEventsByTime(){
          && typeof allEvents[event].endTime.length === 'function') {
          allEvents[event].endTime = convertFacebookDateToJavaScriptDate(allEvents[event].endTime);
        }
-        // console.log(allEvents[event]);
         tmpStartDate = new Date(allEvents[event].startTime);
         tmpEndDate = new Date(allEvents[event].endTime);
         if(tmpStartDate < filters.endTime && tmpEndDate > filters.startTime && !eventIsInArray(shownEvents, allEvents[event].id)){
@@ -66,6 +76,7 @@ function filterEventsByTime(){
     }
 }
 
+//Checks if id is in given array
 function eventIsInArray(arr,id){
     for(var check in arr){
         if(arr[check].id == id){
@@ -75,6 +86,8 @@ function eventIsInArray(arr,id){
     return false;
 }
 
+//Converts the string that facebook gives to
+//a JS Date object.
 function convertFacebookDateToJavaScriptDate(facebookDate){
     if(facebookDate == null || !facebookDate || facebookDate == undefined){
         return false;
@@ -87,8 +100,8 @@ function convertFacebookDateToJavaScriptDate(facebookDate){
 }
 
 
+//Shows all events in shownEvents array
 function showEvents(){
-
     var id = null;
     var element = null;
 
@@ -99,6 +112,7 @@ function showEvents(){
     }
 }
 
+//Hide all events in shownEvents array
 function hideEvents() {
   var id = null;
   var element = null;
@@ -109,6 +123,7 @@ function hideEvents() {
   }
 }
 
+//Saves fitler options to localStorage
 function saveFiltersInLocalStorage(f){
   const theForm = $('.inputbox');
   const inputBox = $(theForm.find('input'));
@@ -124,8 +139,8 @@ function saveFiltersInLocalStorage(f){
   })
 }
 
+//loads events from localStorage
 function loadFiltersInLocalStorage(){
-
   var f = {};
   f.startTime = new Date(localStorage.startTime);
   f.endTime = new Date(localStorage.endTime);
@@ -134,6 +149,7 @@ function loadFiltersInLocalStorage(){
   return f;
 }
 
+//Makes loaded filters from localStorage active
  function setLoadedFilters(lf){
    if(isNaN(lf.startTime.getDate()) === false ) {
      filters.startTime = lf.startTime;
