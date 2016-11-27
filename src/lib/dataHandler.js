@@ -4,7 +4,11 @@ let events = [];
 
 // gives longitude and latitude for an IP
 exports.getLocationByIP = (req, res, next) => {
-  //
+  //We use a fixed IP address here when developing.
+  //If the request comes from the same machine as the 
+  //server the req.ip = ::1, witch means "your ip".
+  //If we deploy the site on a deticated server we 
+  //would use req.ip.
   const tempIP = '130.208.151.126';
 
   req.testIP = tempIP;
