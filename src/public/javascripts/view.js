@@ -141,6 +141,7 @@ function filterEventsByAttenders(){
 
 //Filter all events acording to date filter options.
 function filterEventsByTime(){
+    console.log(filters);
     if(filters.startTime.valueOf() == filters.endTime.valueOf()){
         filters.endTime.setDate(filters.endTime.getDate()+1);
     }
@@ -153,13 +154,8 @@ function filterEventsByTime(){
          && typeof allEvents[event].startTime.length === 'function') {
         allEvents[event].startTime = convertFacebookDateToJavaScriptDate(allEvents[event].startTime);
        }
-       if(allEvents[event].endTime !== null
-         && typeof allEvents[event].endTime.length === 'function') {
-         allEvents[event].endTime = convertFacebookDateToJavaScriptDate(allEvents[event].endTime);
-       }
         tmpStartDate = new Date(allEvents[event].startTime);
-        tmpEndDate = new Date(allEvents[event].endTime);
-        if(tmpStartDate < filters.endTime && tmpEndDate > filters.startTime && !eventIsInArray(shownEvents, allEvents[event].id)){
+        if(tmpStartDate < filters.endTime && tmpStartDate > filters.startTime && !eventIsInArray(shownEvents, allEvents[event].id)){
             shownEvents.push(allEvents[event]);
         }
     }
@@ -245,13 +241,13 @@ function loadFiltersInLocalStorage(){
    if(isNaN(lf.endTime.getDate()) === false) {
      filters.endTime = lf.endTime;
    }
-   if(lf.minAttenders !== null) {
+   if(lf.minAttenders !== null && lf.minAttenders && lf.minAttenders != undefined) {
      filters.minAttenders = lf.minAttenders;
    }
-   if(lf.maxAttenders !== null) {
+   if(lf.maxAttenders !== null && lf.maxAttenders && lf.maxAttenders != undefined) {
      filters.maxAttenders = lf.maxAttenders;
    }
- }
+ };
 
 //open filters
 jQuery(function($)
@@ -295,11 +291,12 @@ jQuery(function($)
 
 //init attending slider
  $( function() {
+   console.log(filters);
     $( "#slider-range_1" ).slider({
       range: true,
       min: 0,
       max: 500,
-      values: [ filters.minAttenders, 500 ],
+      values: [ filters.minAttenders, filters.maxAttenders],
       slide: function( event, ui ) {
           var handles = $("#slider-range_1 > span");
           handles[0].innerHTML = ui.values[0];
@@ -312,8 +309,8 @@ jQuery(function($)
       }
     });
     var handles = $("#slider-range_1 > span");
-    handles[0].innerHTML = 0;
-    handles[1].innerHTML = 500;
+    handles[0].innerHTML = filters.minAttenders;
+    handles[1].innerHTML = filters.maxAttenders;
   } );
 
   function updateFilter(type, min, max) {
