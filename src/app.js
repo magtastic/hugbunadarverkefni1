@@ -8,9 +8,6 @@ const routes = require('./routes');
 
 const app = express();
 
-const EventSearch = require('facebook-events-by-location-core');
-
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
