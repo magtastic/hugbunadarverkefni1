@@ -4,7 +4,7 @@ let events = [];
 
 // gives longitude and latitude for an IP
 exports.getLocationByIP = (req, res, next) => {
-  // Setjið IP tölu hér inn fyrir developing...
+  //
   const tempIP = '130.208.151.126';
 
   req.testIP = tempIP;
