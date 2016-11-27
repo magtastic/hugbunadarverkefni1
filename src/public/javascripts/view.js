@@ -71,7 +71,6 @@ function initGoogleAPI(){
   inputBox.keypress( function (e) {
     var enterKeycode = 13;
     if (e.keyCode === enterKeycode) {
-      console.log('hae');
       e.preventDefault();
       var inputValue = inputBox.val();
       getLatitudeAndLongitude(processResponse, inputValue);
@@ -82,7 +81,6 @@ function initGoogleAPI(){
     geocoder.geocode( { 'address': inputValue}, function(results, status) {
           if (status == google.maps.GeocoderStatus.OK) {
             console.log(results);
-            //console.log("location : " + results[0].geometry.location.lat() + " " +results[0].geometry.location.lng());
           } else {
             console.log("Something got wrong " + status);
           }
@@ -141,7 +139,6 @@ function filterEventsByAttenders(){
 
 //Filter all events acording to date filter options.
 function filterEventsByTime(){
-    console.log(filters);
     if(filters.startTime.valueOf() == filters.endTime.valueOf()){
         filters.endTime.setDate(filters.endTime.getDate()+1);
     }
@@ -261,8 +258,6 @@ jQuery(function($)
 
 //init date slider
  $( function() {
-    console.log(filters.startTime.getDay());
-    console.log(filters.endTime.getDay());
     $( "#slider-range" ).slider({
       range: true,
       min: 0,
@@ -291,7 +286,6 @@ jQuery(function($)
 
 //init attending slider
  $( function() {
-   console.log(filters);
     $( "#slider-range_1" ).slider({
       range: true,
       min: 0,
